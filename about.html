@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="motion-safe:scroll-smooth">
+  <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="description" content="Test">
+<title>Index</title>
+		<link rel="preload" as="font" href="/assets/f/i.woff2" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" as="style" href="/assets/index.0c2c6cf1.css">
+	<link rel="stylesheet" href="/assets/about.3fff05e0.css" /></head>
+	<body class="text-white 2xl:text[20px]">
+		<nav class="px-2 sm:px-6">
+    <div class="max-w-7xl sm:flex sm:flex-rows sm:items-center sm:justify-between mx-auto">
+        
+        <div class="flex justify-between w-full">
+            
+            <a href="#" class="flex items-center">
+                <span class="text-xl font-semibold whitespace-nowrap text-zinc-200">
+                    Jet Li
+                </span>
+            </a>
+
+            <button id="menubtn" data-nav-toggle="navbar" type="button" class="inline-flex items-center p-2 md:hidden dark:text-gray-300 dark:focus:ring-transparent" aria-controls="navbar-multi-level" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+        </div>
+        
+        <!-- Menu full group -->
+        <div class="
+            basis-full
+            flex
+            flex-col
+            sm:flex-row
+            gap-x-8
+            gap-y-4
+            sm:ml-10
+            sm:pb-0
+        ">
+            <div id="navbar" class="
+                hidden
+                items-center
+                sm:justify-end
+                w-full
+                md:flex
+                md:order-1
+            ">
+            <!-- Row -->
+            <ul class="
+                flex
+                flex-col
+                p-4
+                mt-4
+                md:flex-row
+                md:gap-8
+                md:mt-0
+                text-base
+                md:font-medium
+                text-gray-200
+                ">
+                <li>
+                    <a class="block py-2" title="About" href="/about">About</a>
+                </li>
+                <li>
+                    <a class="block py-2" title="Skills" href="#">Skills</a>
+                </li>
+                <li>
+                    <a class="block py-2" title="Works" href="#">Works</a>
+                </li>
+                <li>
+                    <a class="block py-2" title="Contact" href="#">Contact</a>
+                </li>
+            </ul>
+            </div><!-- End of Menu grp -->
+        </div>
+    </div>
+</nav>
+
+<script is:global>
+function init() {
+    const s = document.getElementById('menubtn');
+    if (s && s.hasAttribute('data-nav-toggle')) {
+        const el = document.getElementById(s.dataset.navToggle || "");
+        if (el) {
+            ["resize", "click"].forEach((e) => {
+                s.addEventListener(e, () => {
+                    el.classList.toggle('hidden');
+                    s.setAttribute('aria-expanded',
+                        `${!(el.classList.contains('hidden') === true)}`
+                    );
+                });
+            })
+        }
+    }
+
+}
+
+init();
+
+
+// const s = document.querySelectorAll('button');
+// for (let i = 0; i < s.length; i++) {
+    // if (s[i].hasAttribute('data-nav-toggle')) {
+    //     const gm = document.getElementById(s[i].dataset.navToggle || "");
+    //     if (gm) {
+    //         s[i].addEventListener('click', () => {
+    //             gm.classList.toggle('hidden');
+    //         });
+    //     }
+    // }
+// }
+</script><main class="grid gap-32 max-w-7xl mx-auto scroll-smooth">
+        <h1>About</h1>
+    	<footer class="bg-zinc-800 p-10 mx-8 rounded-tl-3xl rounded-tr-3xl">
+    <p class="text-indigo-500 text-[19px] font-bold mb-4">CONTACT</p>
+    <p class="text-lg">I'm seeking out opportunities to collaborate with companies.
+    Feel free to reach out through</p>
+
+    <div class="flex space-x-2 mt-2 mb-6">
+        <svg class="w-6 h-6 stroke-2 fill-none stroke-white" width="20" height="20" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+            <path d="M3 7l9 6l9 -6"></path>
+         </svg>
+        <a class="text-base" href="mailto:hello@jetligateway.com">hello@jetligateway.com</a>
+    </div>
+</footer>
+	</main>
+	</body></html>
