@@ -18,8 +18,8 @@
 	<body class="text-gray-100 2xl:text[20px] bg-[#282828]">
     <div id="q-app">
       <h1>{{asd}}</h1>
-	<div class="q-ma-md">
-    	<q-btn label="Notify" color="primary" @click="notify"></q-btn>
+	    <div class="q-ma-md">
+    	  <q-btn label="Notify" color="primary" @click="notify"></q-btn>
     	</div>
 		<nav class="
     grid
@@ -279,11 +279,13 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/quasar@2.11.5/dist/quasar.umd.prod.js"></script>
   <script>
+    const { useQuasar } = Quasar
     const app = Vue.createApp({
       setup () {
-	const $q = useQuasar()
+	      const $q = useQuasar()
         return {
-          asd: "Hello asd"
+          asd: "Hello asd",
+          notify
         }
         function notify () {
           $q.notify('Running on Quasar v' + $q.version)
