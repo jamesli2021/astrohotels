@@ -281,9 +281,13 @@
   <script>
     const app = Vue.createApp({
       setup () {
+	const $q = useQuasar()
         return {
           asd: "Hello asd"
         }
+        function notify () {
+          $q.notify('Running on Quasar v' + $q.version)
+        }	      
       }
     })
 
