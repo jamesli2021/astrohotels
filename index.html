@@ -275,25 +275,5 @@
       </div>
     </div>
   </footer>
-  <script src="/astrohotels/vue.global.prod.js"></script>
-  <script src="/astrohotels/quasar.umd.prod.js"></script>
-  <script>
-    const { useQuasar } = Quasar
-    const app = Vue.createApp({
-      setup () {
-	      const $q = useQuasar()
-        return {
-          asd: "Hello asd",
-          notify
-        }
-        function notify () {
-          $q.notify('Running on Quasar v' + $q.version)
-        }	      
-      }
-    })
-
-    app.use(Quasar)
-    app.mount('#q-app')
-  </script>
 	</body>
 </html>
